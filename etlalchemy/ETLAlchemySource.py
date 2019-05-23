@@ -694,11 +694,11 @@ class ETLAlchemySource():
             conn = psycopg2.connect(
                 """
                 host='{0}'
-                port='5432'
-                dbname='{1}'
-                user='{2}'
-                password='{3}'
-                """.format(host, db_name, username, password))
+                port='{1}'
+                dbname='{2}'
+                user='{3}'
+                password='{4}'
+                """.format(host, port, db_name, username, password))
             cur = conn.cursor()
             # Legacy method (doesn't work if not superuser, and if file is
             # LOCAL
