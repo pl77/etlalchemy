@@ -689,6 +689,7 @@ class ETLAlchemySource():
             password = self.dst_engine.url.password
             db_name = self.dst_engine.url.database
             host = self.dst_engine.url.host
+            port = self.dst_engine.url.port
             
             import psycopg2
             conn = psycopg2.connect(
